@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "FlyTranslator",
+    "description": "Get on the fly translations by selecting text and pressing ALT!",
+    "version": "1.0.1",
+    "icons": {
+        "16": "images/manMage.png",
+        "48": "images/manMage.png",
+        "128": "images/manMage.png"
+    },
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js": ["inject.js"]
+        }
+    ],
+    "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs",
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_title": "Inject"
+    }
+}
